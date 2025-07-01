@@ -256,7 +256,15 @@ public class StudentAttendanceService {
 
 		return attendanceForm;
 	}
-
+/**ここから
+ */
+	public Integer entoyCount(Integer lmsUserId) {
+		Date trainingDate = attendanceUtil.getTrainingDate();
+		Integer count = tStudentAttendanceMapper.notEntorCount(lmsUserId,Constants.DB_FLG_FALSE,trainingDate);
+		return count;
+	}
+	
+	
 	/**
 	 * 勤怠登録・更新処理
 	 * 

@@ -17,6 +17,8 @@ import jp.co.sss.lms.entity.TStudentAttendance;
 @Mapper
 public interface TStudentAttendanceMapper {
 
+	Integer notEntorCount(@Param("lmsUserId")Integer lmsUserId,@Param("deleteFlg") Short deleteFlg,
+			@Param("trainingDate")Date trainingDate);
 	/**
 	 * 勤怠情報（受講生入力）取得（LMSユーザーID）
 	 * 

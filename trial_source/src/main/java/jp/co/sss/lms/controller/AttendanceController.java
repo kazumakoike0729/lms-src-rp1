@@ -47,6 +47,10 @@ public class AttendanceController {
 				.getAttendanceManagement(loginUserDto.getCourseId(), loginUserDto.getLmsUserId());
 		model.addAttribute("attendanceManagementDtoList", attendanceManagementDtoList);
 
+		Integer count = studentAttendanceService.entoyCount(loginUserDto.getLmsUserId());
+		if(count > 0) {
+			model.addAttribute("過去日の勤怠にエラーがあります。");
+		}
 		return "attendance/detail";
 	}
 
@@ -143,5 +147,10 @@ public class AttendanceController {
 
 		return "attendance/detail";
 	}
-
+	
+	
+	
+	
+	
+	
 }

@@ -39,7 +39,7 @@ $(function(){
     $('#file-input').change(function() {
         $('#file-input-dummy').val($(this).val());
     });
-
+//test
     $('input[type=date]').blur(function(){
         var dateVal = $(this).val();
         dateVal = dateVal.replace(/\u002f/g, '-');

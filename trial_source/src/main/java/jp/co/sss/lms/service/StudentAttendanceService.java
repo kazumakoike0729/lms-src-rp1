@@ -258,13 +258,13 @@ public class StudentAttendanceService {
 	}
 /**ここから
  */
-	public Integer entoyCount(Integer lmsUserId) {
+	public boolean notEnterCount(Integer lmsUserId) {
 		Date trainingDate = attendanceUtil.getTrainingDate();
-		Integer count = tStudentAttendanceMapper.notEntorCount(lmsUserId,Constants.DB_FLG_FALSE,trainingDate);
-		return count;
+		Integer count = tStudentAttendanceMapper.notEnterCount(lmsUserId,Constants.DB_FLG_FALSE,trainingDate);
+		return count > 0;
 	}
 	
-	
+//	
 	/**
 	 * 勤怠登録・更新処理
 	 * 

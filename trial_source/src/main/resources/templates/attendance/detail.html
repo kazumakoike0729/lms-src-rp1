@@ -4,10 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <title>勤怠情報変更｜LMS</title>
-<script th:src="@{/js/lms_common.js}" type="text/javascript"></script>
-
 </head>
 <body>
+
+<span>
+    <input type="hidden" id="hasNotEnterCount"
+       th:value="${notEnterCount > 0} ? 'true' : 'false'" />
+<script th:src="@{/js/notEnterCountAlert.js}" type="text/javascript"></script>
+</span>
 
 	<!-- 完了メッセージ -->
 	<th:block th:if="${not #strings.isEmpty(message)}" id="message">

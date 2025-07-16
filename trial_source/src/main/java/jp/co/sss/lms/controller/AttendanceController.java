@@ -44,15 +44,13 @@ public class AttendanceController {
 
 		// 勤怠一覧の取得
 		List<AttendanceManagementDto> attendanceManagementDtoList = studentAttendanceService
-				.getAttendanceManagement(loginUserDto.getCourseId(), loginUserDto.getLmsUserId());
+				.getAttendanceManagement(loginUserDto.getCourseId(), loginUserDto.getLmsUserId());	
+		Integer notEnterCount = studentAttendanceService.getNotEnterCount(loginUserDto.getLmsUserId());
+		model.addAttribute("notEnterCount", notEnterCount);
 		model.addAttribute("attendanceManagementDtoList", attendanceManagementDtoList);
-
-		boolean notEnterFlag = studentAttendanceService.notEnterCount(loginUserDto.getLmsUserId());
-			model.addAttribute("notEnterFlag",notEnterFlag);
-		
-			return "attendance/detail";
+		return "attendance/detail";
 	}
-//
+
 	/**
 	 * 勤怠管理画面 『出勤』ボタン押下
 	 * 

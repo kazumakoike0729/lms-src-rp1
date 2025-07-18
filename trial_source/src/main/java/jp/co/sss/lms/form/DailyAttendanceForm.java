@@ -46,5 +46,5 @@ public class DailyAttendanceForm {
 	private String courseName;
 	/** インデックス */
 	private String index;
-
+//おそらくこっちに追記？？
 }

@@ -271,6 +271,8 @@ public class StudentAttendanceService {
 	    }
 	}
 	
+//出退勤時間分割、結合
+	
 	/**
 	 * 勤怠登録・更新処理
 	 * 

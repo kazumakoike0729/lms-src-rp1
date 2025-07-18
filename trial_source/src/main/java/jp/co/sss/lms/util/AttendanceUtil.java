@@ -36,6 +36,22 @@ public class AttendanceUtil {
 				Constants.SSS_WORK_END_TIME);
 	}
 
+//以下から製造物
+	//時間の取得、抽出する記述
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * 与えられた定時・出退勤時間を元に、遅刻早退を判定する
 	 * 

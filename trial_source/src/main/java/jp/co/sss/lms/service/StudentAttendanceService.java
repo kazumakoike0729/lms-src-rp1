@@ -257,22 +257,8 @@ public class StudentAttendanceService {
 
 		return attendanceForm;
 	}
-/**ここから
- 
-	public boolean notEnterCount(Integer lmsUserId) {
-		Date trainingDate = attendanceUtil.getTrainingDate();
-		Integer count = tStudentAttendanceMapper.notEnterCount(lmsUserId,Constants.DB_FLG_FALSE,trainingDate);
-		return count > 0;
-	}
-*/
-/**2bん	
-	public int notEnteredAttendanceCount() {
-		return tStudentAttendanceMapper.notEnterCount(
-				loginUserDto.getLmsUserId(),
-				Constants.DB_FLG_FALSE,new Date());
-		}
-*/	
-//3
+
+//25 日付のフォーマットとパース、でーたベース呼び出し、エラー処理
 	public Integer getNotEnterCount(Integer lmsUserId) {
 			try {
 				SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");

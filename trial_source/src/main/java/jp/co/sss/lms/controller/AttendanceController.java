@@ -42,7 +42,7 @@ public class AttendanceController {
 	@RequestMapping(path = "/detail", method = RequestMethod.GET)
 	public String index(Model model) {
 
-		// 勤怠一覧の取得
+		// 勤怠一覧の取得、未入力件数の取得、モデルでた追加
 		List<AttendanceManagementDto> attendanceManagementDtoList = studentAttendanceService
 				.getAttendanceManagement(loginUserDto.getCourseId(), loginUserDto.getLmsUserId());	
 		Integer notEnterCount = studentAttendanceService.getNotEnterCount(loginUserDto.getLmsUserId());

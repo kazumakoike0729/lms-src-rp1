@@ -36,10 +36,31 @@ public class AttendanceUtil {
 				Constants.SSS_WORK_END_TIME);
 	}
 
-//以下から製造物
-	//時間の取得、抽出する記述
-	
-	
+//以下から製造物 時間の取得、抽出する記述  時と分ごとに
+/**	@RestController
+	public class TrainingTimeController {
+
+	    @GetMapping("/training-time/hours")
+	    public LinkedHashMap<String, String> getTrainingTimeHours() {
+	        LinkedHashMap<String, String> zikan = new LinkedHashMap<>();
+	        for (int i = 0; i < 23; i++) {
+	            String hour = String.format("%02d", i);
+	            zikan.put(hour, hour);
+	        }
+	        return zikan;
+	    }
+
+	    @GetMapping("/training-time/minutes")
+	    public LinkedHashMap<String, String> getTrainingTimeMinutes() {
+	        LinkedHashMap<String, String> hun = new LinkedHashMap<>();
+	        for (int i = 0; i < 59; i++) {
+	            String minute = String.format("%02d", i);
+	            hun.put(minute, minute);
+	        }
+	        return hun;
+	    }
+	}
+*/
 	
 	
 	

@@ -32,4 +32,9 @@ public class AttendanceForm {
 	/** 日次の勤怠フォームリスト */
 	private List<DailyAttendanceForm> attendanceList;
 //26追加部分
+	/**時
+	private LinkedHashMap<String, String>zikan
+	
+	private LinkedHashMap<String, String>hun
+	*/
 }

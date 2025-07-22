@@ -47,4 +47,8 @@ public class DailyAttendanceForm {
 	/** インデックス */
 	private String index;
 //おそらくこっちに追記？？
+/**
+	private Integer zikan;
+	private Integer hun;
+	*/
 }

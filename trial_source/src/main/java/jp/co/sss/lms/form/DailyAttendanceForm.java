@@ -46,9 +46,13 @@ public class DailyAttendanceForm {
 	private String courseName;
 	/** インデックス */
 	private String index;
-//おそらくこっちに追記？？
-/**
-	private Integer zikan;
-	private Integer hun;
-	*/
+//26追記
+	// 追加：出勤時間の時
+	private Integer trainingStartHour;
+	// 追加：出勤時間の分
+	private Integer trainingStartMinute;
+	// 追加：退勤時間の時
+	private Integer trainingEndHour;
+	// 追加：退勤時間の分
+	private Integer trainingEndMinute;
 }

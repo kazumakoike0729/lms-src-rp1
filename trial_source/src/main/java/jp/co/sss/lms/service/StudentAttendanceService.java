@@ -271,6 +271,9 @@ public class StudentAttendanceService {
 	    }
 	}
 	
+//26 		
+	
+	
 //出退勤時間分割、結合
 	
 	/**
@@ -288,7 +291,7 @@ public class StudentAttendanceService {
 		// 現在の勤怠情報（受講生入力）リストを取得
 		List<TStudentAttendance> tStudentAttendanceList = tStudentAttendanceMapper
 				.findByLmsUserId(lmsUserId, Constants.DB_FLG_FALSE);
-
+//編集中うう
 		// 入力された情報を更新用のエンティティに移し替え
 		Date date = new Date();
 		for (DailyAttendanceForm dailyAttendanceForm : attendanceForm.getAttendanceList()) {

@@ -32,9 +32,8 @@ public class AttendanceForm {
 	/** 日次の勤怠フォームリスト */
 	private List<DailyAttendanceForm> attendanceList;
 //26追加部分
-	/**時
-	private LinkedHashMap<String, String>zikan
-	
-	private LinkedHashMap<String, String>hun
-	*/
+	// 追加：時間(プルダウン)
+	private LinkedHashMap<Integer, String> hours; //
+	// 追加：分(プルダウン)
+	private LinkedHashMap<Integer, String> minutes; //
 }

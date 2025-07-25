@@ -48,26 +48,26 @@
 								<td class="w140">[[${dailyAttendanceForm.dispTrainingDate}]]</td>
 								<td class="w300">[[${dailyAttendanceForm.sectionName}]]</td>
 								<td class="w70">
-<!--//追記
+<!--ここから編輯-->
 									<select th:name="|attendanceList[${stat.index}].trainingStartHour|" class="form-control" style="display:inline-block; width:48%;">
 										<option th:each="hour : ${attendanceForm.hours}" th:value="${hour.key}" th:text="${hour.value}" th:selected="${hour.key == dailyAttendanceForm.trainingStartHour}"></option>
 									</select>:
 									<select th:name="|attendanceList[${stat.index}].trainingStartMinute|" class="form-control" style="display:inline-block; width:48%;">
 										<option th:each="minute : ${attendanceForm.minutes}" th:value="${minute.key}" th:text="${minute.value}" th:selected="${minute.key == dailyAttendanceForm.trainingStartMinute}"></option>
 									</select>
-//まで!-->			
+<!--ここまで編輯-->	
 									<input type="text" th:name="|attendanceList[${stat.index}].trainingStartTime|"
 									th:value="${dailyAttendanceForm.trainingStartTime}" class="form-control" />
 								</td>
 								<td class="w70">
-<!--//追記
+<!--追記-->
 <select th:name="|attendanceList[${stat.index}].trainingEndHour|" class="form-control" style="display:inline-block; width:48%;">
 										<option th:each="hour : ${attendanceForm.hours}" th:value="${hour.key}" th:text="${hour.value}" th:selected="${hour.key == dailyAttendanceForm.trainingEndHour}"></option>
 									</select>:
 									<select th:name="|attendanceList[${stat.index}].trainingEndMinute|" class="form-control" style="display:inline-block; width:48%;">
 										<option th:each="minute : ${attendanceForm.minutes}" th:value="${minute.key}" th:text="${minute.value}" th:selected="${minute.key == dailyAttendanceForm.trainingEndMinute}"></option>
 									</select>
-//まで		!-->
+<!--ここまで追記-->
 									<input type="text" th:name="|attendanceList[${stat.index}].trainingEndTime|"
 									th:value="${dailyAttendanceForm.trainingEndTime}" class="form-control" />
 								</td>
